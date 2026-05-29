@@ -13,30 +13,26 @@ interface Person {
 // ✏️ EDIT THIS ARRAY — add your team members here
 const PEOPLE: Person[] = [
   {
-    name: "Person 1",
+    name: "Earjina",
     emoji: "🧑‍💻",
     facts: [
-      "Fact 1 about this person.",
-      "Fact 2 about this person.",
-      "Fact 3 about this person.",
+      "Prefer freshly cooked food only, avoid eating the same food again.",
+      "Store leftovers in the fridge even though I know I won't eat them, then discard them after ~10 days.",
     ],
   },
   {
-    name: "Person 2",
+    name: "shrishti",
     emoji: "🏗️",
     facts: [
-      "Fact 1 about this person.",
-      "Fact 2 about this person.",
-      "Fact 3 about this person.",
+      "I was an athlete in my school days. To be specific a sprinter.",
+      "If this counts as interesting :)",
     ],
   },
   {
-    name: "Person 3",
+    name: "Ayush-me",
     emoji: "📋",
     facts: [
-      "Fact 1 about this person.",
-      "Fact 2 about this person.",
-      "Fact 3 about this person.",
+      "Had 10% attendance in my college days",
     ],
   },
   {
