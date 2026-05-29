@@ -58,7 +58,7 @@ const PEOPLE: Person[] = [
     name: "Anshika",
     emoji: "⚡",
     facts: [
-      "I think extremely fast — faster than my verbal filter sometimes.",
+      "I think extremely fast — faster than my verbal filter sometimes. And then overthink it.",
     ],
   },
 ];
