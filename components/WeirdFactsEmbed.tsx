@@ -13,30 +13,57 @@ interface Person {
 // ✏️ EDIT THIS ARRAY — add your team members here
 const PEOPLE: Person[] = [
   {
-    name: "Person One",
+    name: "Person 1",
     emoji: "🧑‍💻",
     facts: [
-      "This person has been with the team the longest.",
-      "They once fixed a prod bug at 2am without waking anyone up.",
-      "Their PR descriptions are always longer than the actual code.",
+      "Fact 1 about this person.",
+      "Fact 2 about this person.",
+      "Fact 3 about this person.",
     ],
   },
   {
-    name: "Person Two",
+    name: "Person 2",
     emoji: "🏗️",
     facts: [
-      "This person has drawn the same architecture diagram 4 different times.",
-      "They say 'it depends' at least 3 times per meeting.",
-      "They once introduced Kafka to a project with 12 users.",
+      "Fact 1 about this person.",
+      "Fact 2 about this person.",
+      "Fact 3 about this person.",
     ],
   },
   {
-    name: "Person Three",
+    name: "Person 3",
     emoji: "📋",
     facts: [
-      "This person has never missed a daily standup in 6 months.",
-      "Their Jira board is the cleanest on the team.",
-      "They once rescheduled a retro so many times it became the next sprint's retro.",
+      "Fact 1 about this person.",
+      "Fact 2 about this person.",
+      "Fact 3 about this person.",
+    ],
+  },
+  {
+    name: "Person 4",
+    emoji: "🐍",
+    facts: [
+      "Fact 1 about this person.",
+      "Fact 2 about this person.",
+      "Fact 3 about this person.",
+    ],
+  },
+  {
+    name: "Person 5",
+    emoji: "🎯",
+    facts: [
+      "Fact 1 about this person.",
+      "Fact 2 about this person.",
+      "Fact 3 about this person.",
+    ],
+  },
+  {
+    name: "Person 6",
+    emoji: "🚀",
+    facts: [
+      "Fact 1 about this person.",
+      "Fact 2 about this person.",
+      "Fact 3 about this person.",
     ],
   },
 ];
