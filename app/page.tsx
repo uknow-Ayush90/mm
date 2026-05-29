@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { Flame, Sparkles, TrendingUp, Upload, Monitor, Gamepad2, Brain } from "lucide-react";
+import { Flame, Sparkles, TrendingUp, Upload, Monitor, Gamepad2, Brain, Clapperboard } from "lucide-react";
 import Link from "next/link";
 import type { Meme, DeskReview, SortMode } from "@/types";
 import MemeFeed from "@/components/MemeFeed";
@@ -11,6 +11,7 @@ import TagFilter from "@/components/TagFilter";
 import DeskTagFilter from "@/components/DeskTagFilter";
 import NeverHaveIEverEmbed from "@/components/NeverHaveIEverEmbed";
 import WeirdFactsEmbed from "@/components/WeirdFactsEmbed";
+import ReverseMovieMatch from "@/components/ReverseMovieMatch";
 import { cn } from "@/lib/utils";
 
 const SORT_OPTIONS: { value: SortMode; label: string; icon: React.ComponentType<{ size?: number }> }[] = [
@@ -28,13 +29,13 @@ function HomeFeed() {
 
   const [memes, setMemes] = useState<Meme[]>([]);
   const [reviews, setReviews] = useState<DeskReview[]>([]);
-  const [loading, setLoading] = useState(() => !["game", "facts"].includes(tab));
+  const [loading, setLoading] = useState(() => !["game", "facts", "movies"].includes(tab));
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(false);
   const [loadingMore, setLoadingMore] = useState(false);
 
   useEffect(() => {
-    if (tab === "game" || tab === "facts") return;
+    if (tab === "game" || tab === "facts" || tab === "movies") return;
 
     setMemes([]);
     setReviews([]);
@@ -105,7 +106,7 @@ function HomeFeed() {
           onClick={() => setTab("memes")}
           className={cn(
             "flex items-center gap-1.5 px-4 py-2 text-sm font-semibold border-b-2 transition-all -mb-px",
-            tab === "memes" || (!["desk", "game", "facts"].includes(tab))
+            tab === "memes" || (!["desk", "game", "facts", "movies"].includes(tab))
               ? "border-[#7c3aed] text-white"
               : "border-transparent text-[#6b7280] hover:text-[#9ca3af]"
           )}
@@ -148,10 +149,22 @@ function HomeFeed() {
           <Brain size={14} />
           Weird Facts
         </button>
+        <button
+          onClick={() => setTab("movies")}
+          className={cn(
+            "flex items-center gap-1.5 px-4 py-2 text-sm font-semibold border-b-2 transition-all -mb-px",
+            tab === "movies"
+              ? "border-[#7c3aed] text-white"
+              : "border-transparent text-[#6b7280] hover:text-[#9ca3af]"
+          )}
+        >
+          <Clapperboard size={14} />
+          Movie Match
+        </button>
       </div>
 
-      {/* Sort + filter + upload bar — hidden on game/facts tabs */}
-      {tab !== "game" && tab !== "facts" && (
+      {/* Sort + filter + upload bar — hidden on game/facts/movies tabs */}
+      {tab !== "game" && tab !== "facts" && tab !== "movies" && (
         <div className="flex-shrink-0 px-4 pt-3 pb-2 flex flex-col sm:flex-row gap-2 sm:items-center border-b border-[#111111]">
           <div className="flex items-center gap-2 flex-shrink-0">
             {SORT_OPTIONS.map(({ value, label, icon: Icon }) => (
@@ -185,12 +198,14 @@ function HomeFeed() {
         </div>
       )}
 
-      {/* Feed / Game / Facts */}
+      {/* Feed / Game / Facts / Movies */}
       <div className="flex-1 overflow-hidden">
         {tab === "game" ? (
           <NeverHaveIEverEmbed />
         ) : tab === "facts" ? (
           <WeirdFactsEmbed />
+        ) : tab === "movies" ? (
+          <ReverseMovieMatch />
         ) : tab === "desk" ? (
           <DeskReviewFeed
             reviews={reviews}
