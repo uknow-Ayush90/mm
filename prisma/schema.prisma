@@ -9,16 +9,19 @@ datasource db {
 }
 
 model User {
-  id          String    @id @default(cuid())
-  username    String    @unique
-  displayName String
-  avatarColor String    @default("#7c3aed")
-  role        Role      @default(USER)
-  totalScore  Int       @default(0)
-  memes       Meme[]
-  votes       Vote[]
-  comments    Comment[]
-  createdAt   DateTime  @default(now())
+  id                 String              @id @default(cuid())
+  username           String              @unique
+  displayName        String
+  avatarColor        String              @default("#7c3aed")
+  role               Role                @default(USER)
+  totalScore         Int                 @default(0)
+  memes              Meme[]
+  votes              Vote[]
+  comments           Comment[]
+  deskReviews        DeskReview[]
+  deskReviewVotes    DeskReviewVote[]
+  deskReviewComments DeskReviewComment[]
+  createdAt          DateTime            @default(now())
 }
 
 model Meme {
@@ -83,4 +86,57 @@ enum Role {
 enum VoteType {
   UPVOTE
   DOWNVOTE
+}
+
+model DeskReview {
+  id        String              @id @default(cuid())
+  title     String
+  imageUrl  String
+  publicId  String
+  upvotes   Int                 @default(0)
+  downvotes Int                 @default(0)
+  score     Int                 @default(0)
+  isRemoved Boolean             @default(false)
+  author    User                @relation(fields: [authorId], references: [id])
+  authorId  String
+  tags      DeskReviewTag[]
+  votes     DeskReviewVote[]
+  comments  DeskReviewComment[]
+  createdAt DateTime            @default(now())
+}
+
+model DeskReviewVote {
+  id           String     @id @default(cuid())
+  type         VoteType
+  user         User       @relation(fields: [userId], references: [id])
+  userId       String
+  deskReview   DeskReview @relation(fields: [deskReviewId], references: [id])
+  deskReviewId String
+
+  @@unique([userId, deskReviewId])
+}
+
+model DeskReviewComment {
+  id           String     @id @default(cuid())
+  body         String
+  author       User       @relation(fields: [authorId], references: [id])
+  authorId     String
+  deskReview   DeskReview @relation(fields: [deskReviewId], references: [id])
+  deskReviewId String
+  createdAt    DateTime   @default(now())
+}
+
+model DeskTag {
+  slug    String          @id
+  name    String          @unique
+  reviews DeskReviewTag[]
+}
+
+model DeskReviewTag {
+  deskReview   DeskReview @relation(fields: [deskReviewId], references: [id], onDelete: Cascade)
+  deskReviewId String
+  tag          DeskTag    @relation(fields: [tagSlug], references: [slug])
+  tagSlug      String
+
+  @@id([deskReviewId, tagSlug])
 }

@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { TAGS } from "../lib/tags";
+import { DESK_TAGS } from "../lib/desk-tags";
 
 const prisma = new PrismaClient();
 
@@ -12,7 +13,17 @@ async function main() {
       create: { name: tag.name, slug: tag.slug },
     });
   }
-  console.log(`Seeded ${TAGS.length} tags.`);
+  console.log(`Seeded ${TAGS.length} meme tags.`);
+
+  console.log("Seeding desk tags...");
+  for (const tag of DESK_TAGS) {
+    await prisma.deskTag.upsert({
+      where: { slug: tag.slug },
+      update: {},
+      create: { name: tag.name, slug: tag.slug },
+    });
+  }
+  console.log(`Seeded ${DESK_TAGS.length} desk tags.`);
 }
 
 main()
