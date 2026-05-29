@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Upload, Trophy, Home, Menu, X, Flame } from "lucide-react";
+import { Upload, Trophy, Home, Menu, X, Flame, Gamepad2 } from "lucide-react";
 import { useUser } from "@/context/UserContext";
 import UserAvatar from "./UserAvatar";
 import OnboardingModal from "./OnboardingModal";
@@ -11,6 +11,7 @@ import OnboardingModal from "./OnboardingModal";
 const navLinks = [
   { href: "/", label: "Feed", icon: Home },
   { href: "/leaderboard", label: "Leaderboard", icon: Trophy },
+  { href: "/never-have-i-ever", label: "Never Have I Ever", icon: Gamepad2 },
 ];
 
 export default function Navbar() {
