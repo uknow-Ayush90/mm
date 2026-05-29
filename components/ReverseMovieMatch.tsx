@@ -85,6 +85,80 @@ const MOVIES: Movie[] = [
     emoji: "🚀",
     type: "hollywood",
   },
+
+  // Round 2 — Bollywood
+  {
+    clue: "A woman leaves her own wedding, boards a random bus, and spends three weeks in Europe alone. Her family considers this a scandal. She considers it a Tuesday.",
+    answer: "Queen",
+    explanation: "Rani goes on her honeymoon solo after being dumped the day before the wedding. She ends up having a better time than she ever would have with the groom. He is not missed.",
+    emoji: "👑",
+    type: "bollywood",
+  },
+  {
+    clue: "A man pretends to be a doctor for several months. Nobody notices because he is polite and brings fruit.",
+    answer: "Munna Bhai MBBS",
+    explanation: "Munna convinces an entire hospital and his own parents that he is a qualified physician through charm and zero medical knowledge. The fruit is key. Hospitals should really check IDs.",
+    emoji: "🩺",
+    type: "bollywood",
+  },
+  {
+    clue: "A college dropout returns home, says very little, and accidentally fixes a multi-generational family feud by just being unbothered.",
+    answer: "Dil Dhadakne Do",
+    explanation: "Kabir and Aalia are stuck on a cruise with their deeply dysfunctional family. The children spend ten days watching their parents' thirty-year marriage collapse in real time. The boat is a metaphor.",
+    emoji: "🚢",
+    type: "bollywood",
+  },
+  {
+    clue: "A man spends twenty years chasing a childhood crush who has no idea he exists. He eventually gives up. She immediately notices him.",
+    answer: "Kuch Kuch Hota Hai",
+    explanation: "Rahul is completely oblivious to Anjali for eight years. The moment he stops caring, she shows up in a sari and he forgets his entire fiancée. Timing is everything in Bollywood.",
+    emoji: "🏀",
+    type: "bollywood",
+  },
+  {
+    clue: "A deeply unqualified man is handed the most important job in the country based entirely on a recommendation from someone who met him at a tea stall.",
+    answer: "Nayak",
+    explanation: "Shivaji Rao becomes Chief Minister for a day on a bet, then accidentally becomes competent at it. The entire premise is that the existing politicians were so bad that a random person was an upgrade.",
+    emoji: "🏛️",
+    type: "bollywood",
+  },
+  {
+    clue: "Two strangers agree to swap life problems as a favour. Both problems get significantly worse before one of them gets better.",
+    answer: "Rab Ne Bana Di Jodi",
+    explanation: "Surinder disguises himself as a completely different person to win over his own wife. She falls for the disguise. He then has an identity crisis about which version of himself she actually likes.",
+    emoji: "🥸",
+    type: "bollywood",
+  },
+  {
+    clue: "A group of friends go on a holiday specifically to not think about their problems. Every single one of their problems follows them on the trip.",
+    answer: "Dil Chahta Hai",
+    explanation: "Akash, Sid, and Sameer go to Goa to have fun. Sameer falls in love immediately, Sid is already in love, and Akash falls in love despite aggressively not wanting to. Goa did nothing.",
+    emoji: "🌊",
+    type: "bollywood",
+  },
+
+  // Round 2 — Hollywood
+  {
+    clue: "A man discovers his entire life is a television programme. Rather than seeking therapy, he attempts to sail out of the set.",
+    answer: "The Truman Show",
+    explanation: "Truman Burbank has been on live TV since birth without consent. When he figures it out, his solution is to sail to the literal edge of the world. HR at Omnicom would have a field day.",
+    emoji: "📺",
+    type: "hollywood",
+  },
+  {
+    clue: "Two men spend years copying each other's homework and then both fail the assignment anyway.",
+    answer: "The Prestige",
+    explanation: "Angier and Borden dedicate their entire lives to ruining each other's magic acts. Both lose everything. The trick that started the rivalry was performed correctly the first time.",
+    emoji: "🎩",
+    type: "hollywood",
+  },
+  {
+    clue: "A retired hitman tries to quit his job. His employer sends 84 people to stop him from doing this. None of them succeed.",
+    answer: "John Wick",
+    explanation: "John Wick just wants to be left alone after his dog is killed. The Russian mob sends an escalating number of assassins to prevent this retirement. The math never works in their favour.",
+    emoji: "🐶",
+    type: "hollywood",
+  },
 ];
 
 const BOLLYWOOD_COUNT = MOVIES.filter((m) => m.type === "bollywood").length;
