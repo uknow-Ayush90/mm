@@ -16,16 +16,14 @@ const PEOPLE: Person[] = [
     name: "Earjina",
     emoji: "🧑‍💻",
     facts: [
-      "Prefer freshly cooked food only, avoid eating the same food again.",
-      "Store leftovers in the fridge even though I know I won't eat them, then discard them after ~10 days.",
+      "Prefer freshly cooked food only, avoid eating the same food again. Store leftovers in the fridge even though I know I won't eat them, then discard them after ~10 days.",
     ],
   },
   {
     name: "shrishti",
     emoji: "🏗️",
     facts: [
-      "I was an athlete in my school days. To be specific a sprinter.",
-      "If this counts as interesting :)",
+      "I was an athlete in my school days. To be specific a sprinter :)",
     ],
   },
   {
@@ -39,27 +37,21 @@ const PEOPLE: Person[] = [
     name: "Person 4",
     emoji: "🐍",
     facts: [
-      "Fact 1 about this person.",
-      "Fact 2 about this person.",
-      "Fact 3 about this person.",
+      "I'm scared of the dark, yet voluntarily watch horror movies — with one eye closed for safety 😄",
     ],
   },
   {
     name: "Person 5",
     emoji: "🎯",
     facts: [
-      "Fact 1 about this person.",
-      "Fact 2 about this person.",
-      "Fact 3 about this person.",
+      "Fact about this person.",
     ],
   },
   {
     name: "Person 6",
     emoji: "🚀",
     facts: [
-      "Fact 1 about this person.",
-      "Fact 2 about this person.",
-      "Fact 3 about this person.",
+      "Fact about this person.",
     ],
   },
 ];
