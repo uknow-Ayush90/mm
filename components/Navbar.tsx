@@ -30,7 +30,7 @@ export default function Navbar() {
             </div>
             <span className="hidden sm:block text-white">
               Team Ashoka{" "}
-              <span className="text-[#7c3aed]">Memes</span>
+              <span className="text-[#7c3aed]">Happy Hour</span>
             </span>
           </Link>
 
