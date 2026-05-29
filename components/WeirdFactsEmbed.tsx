@@ -30,7 +30,7 @@ const PEOPLE: Person[] = [
     name: "Ayush-me",
     emoji: "📋",
     facts: [
-      "I fall asleep under stress — anywhere, anytime. College exam in 10 minutes? Napped for 20. A friend had to shake me awake. CEO's room? Also fine for a nap. I also remember almost all my dreams, and about 70% of them come true — I only realise it mid-moment, like I've already lived this scene before.",
+      "Had 10% attendance in my college days",
     ],
   },
   {
@@ -51,7 +51,7 @@ const PEOPLE: Person[] = [
     name: "Gowthami",
     emoji: "🚀",
     facts: [
-      "Fact about this person.",
+      "I fall asleep under stress — anywhere, anytime. College exam in 10 minutes? Napped for 20. A friend had to shake me awake. CEO's room? Also fine for a nap. I also remember almost all my dreams, and about 70% of them come true — I only realise it mid-moment, like I've already lived this scene before.",
     ],
   },
 ];
